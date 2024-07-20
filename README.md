@@ -228,7 +228,7 @@ git clone https://github.com/judy-community/frontend-auth.git
 git clone https://github.com/judy-community/frontend-user.git
 git clone https://github.com/judy-community/frontend-post.git
 git clone https://github.com/judy-community/frontend-comment.git
-git clone https://github.com/judy-community/infrastructure.git
+git clone https://github.com/judy-community/common-infrastructure.git
 ```
 
 ### 공통 인프라 설정
