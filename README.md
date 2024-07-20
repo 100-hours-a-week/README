@@ -203,7 +203,7 @@ judy-community/
 
 ### 공통 인프라
 
-- **judy-community-infrastructure**: 모든 서비스 및 애플리케이션을 관리하는 Docker Compose 설정이 포함되어 있습니다.
+- **judy-community-common-infrastructure**: 모든 서비스 및 애플리케이션을 관리하는 Docker Compose 설정이 포함되어 있습니다.
 
 ## 설치 방법
 
@@ -233,10 +233,10 @@ git clone https://github.com/judy-community/common-infrastructure.git
 
 ### 공통 인프라 설정
 
-`judy-community-infrastructure` 디렉토리로 이동하여 Docker Compose 설정을 시작합니다
+`judy-community-common-infrastructure` 디렉토리로 이동하여 Docker Compose 설정을 시작합니다
 
 ```bash
-cd judy-community-infrastructure
+cd judy-community-common-infrastructure
 docker-compose up -d
 ```
 
