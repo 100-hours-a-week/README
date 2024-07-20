@@ -12,7 +12,7 @@ Judy Community 프로젝트는 사용자들이 게시물과 댓글을 통해 상
 
 ```
 judy-community/
-├── auth-backend/
+├── backend-auth/
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/
@@ -32,36 +32,158 @@ judy-community/
 │   │       └── application.properties
 │   ├── Dockerfile
 │   ├── build.gradle.kts
-│   └── settings.gradle.kts
 │   └── .github/
 │       └── workflows/
 │           └── ci-cd.yml
-├── user-backend/
-│   ├── (auth-backend와 유사한 구조)
-├── post-backend/
-│   ├── (auth-backend와 유사한 구조)
-├── comment-backend/
-│   ├── (auth-backend와 유사한 구조)
-├── auth-frontend/
+├── backend-user/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── judycorp/
+│   │   │   │           └── user/
+│   │   │   │               ├── config/
+│   │   │   │               ├── controller/
+│   │   │   │               ├── dto/
+│   │   │   │               ├── entity/
+│   │   │   │               ├── exception/
+│   │   │   │               ├── repository/
+│   │   │   │               ├── service/
+│   │   │   │               └── ApplicationUser.java
+│   │   ├── resources/
+│   │       └── application.properties
+│   ├── Dockerfile
+│   ├── build.gradle.kts
+│   └── .github/
+│       └── workflows/
+│           └── ci-cd.yml
+├── backend-post/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── judycorp/
+│   │   │   │           └── post/
+│   │   │   │               ├── config/
+│   │   │   │               ├── controller/
+│   │   │   │               ├── dto/
+│   │   │   │               ├── entity/
+│   │   │   │               ├── exception/
+│   │   │   │               ├── repository/
+│   │   │   │               ├── service/
+│   │   │   │               └── ApplicationPost.java
+│   │   ├── resources/
+│   │       └── application.properties
+│   ├── Dockerfile
+│   ├── build.gradle.kts
+│   └── .github/
+│       └── workflows/
+│           └── ci-cd.yml
+├── backend-comment/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── judycorp/
+│   │   │   │           └── comment/
+│   │   │   │               ├── config/
+│   │   │   │               ├── controller/
+│   │   │   │               ├── dto/
+│   │   │   │               ├── entity/
+│   │   │   │               ├── exception/
+│   │   │   │               ├── repository/
+│   │   │   │               ├── service/
+│   │   │   │               └── ApplicationComment.java
+│   │   ├── resources/
+│   │       └── application.properties
+│   ├── Dockerfile
+│   ├── build.gradle.kts
+│   └── .github/
+│       └── workflows/
+│           └── ci-cd.yml
+├── frontend-auth/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
-│   │   ├── pages/
+│   │   │   ├── Login.js
+│   │   │   ├── Register.js
+│   │   │   ├── Logout.js
+│   │   │   ├── RegisterDelete.js
+│   │   ├── redux/
+│   │   │   ├── authSlice.js
 │   │   ├── services/
-│   │   └── App.js
-│   ├── package.json
+│   │   │   ├── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   ├── App.css
 │   ├── Dockerfile
+│   ├── package.json
 │   └── .github/
 │       └── workflows/
 │           └── ci-cd.yml
-├── user-frontend/
-│   ├── (auth-frontend와 유사한 구조)
-├── post-frontend/
-│   ├── (auth-frontend와 유사한 구조)
-├── comment-frontend/
-│   ├── (auth-frontend와 유사한 구조)
+├── frontend-user/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── UserDetail.js
+│   │   │   ├── UserEdit.js
+│   │   │   ├── UserDelete.js
+│   │   ├── redux/
+│   │   │   ├── userSlice.js
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   ├── App.css
+│   ├── Dockerfile
+│   ├── package.json
+│   └── .github/
+│       └── workflows/
+│           └── ci-cd.yml
+├── frontend-post/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── PostList.js
+│   │   │   ├── PostDetail.js
+│   │   │   ├── PostCreate.js
+│   │   │   ├── PostEdit.js
+│   │   │   ├── PostDelete.js
+│   │   ├── redux/
+│   │   │   ├── postSlice.js
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   ├── App.css
+│   ├── Dockerfile
+│   ├── package.json
+│   └── .github/
+│       └── workflows/
+│           └── ci-cd.yml
+├── frontend-comment/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── CommentList.js
+│   │   │   ├── CommentCreate.js
+│   │   │   ├── CommentEdit.js
+│   │   │   ├── CommentDelete.js
+│   │   ├── redux/
+│   │   │   ├── commentSlice.js
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   ├── App.css
+│   ├── Dockerfile
+│   ├── package.json
+│   └── .github/
+│       └── workflows/
+│           └── ci-cd.yml
 └── common-infrastructure/
     └── docker-compose.yml
+
 ```
 
 
